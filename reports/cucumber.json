@@ -1,0 +1,75 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Builds",
+    "line": 1,
+    "id": "builds",
+    "tags": [],
+    "uri": "test/e2e/features/builds.feature",
+    "elements": [
+      {
+        "id": "builds;viewing-the-latest-daily-builds",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Viewing the latest daily builds",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the landing page has been accessed",
+            "match": {
+              "location": "test/e2e/step-definitions/builds.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22440000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "the builds navbar button has been clicked",
+            "match": {
+              "location": "test/e2e/step-definitions/builds.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the latest builds table should be visible",
+            "match": {
+              "location": "test/e2e/step-definitions/builds.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the latest builds should be displayed in the table",
+            "match": {
+              "location": "test/e2e/step-definitions/builds.steps.js:16"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 13000000,
+              "error_message": "Testing if element <.build> has count: 28 - Expected \"28\" but got: \"0\"\n\n    at World.<anonymous> (/Users/tstone10/workspace/fp-dashboard/test/e2e/step-definitions/builds.steps.js:17:24)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

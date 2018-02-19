@@ -1,0 +1,65 @@
+@import "~vue-material/dist/theme/engine"; // Import the theme engine
+
+@include md-register-theme("white", (
+  primary: md-get-palette-color(white, 500), // The primary color of your application
+  accent: md-get-palette-color(white, 500), // The accent or secondary color
+  theme: dark // This can be dark or light
+))
+@import "~vue-material/dist/components/MdField/theme"; // Apply the theme
+
+
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+$primary: #333333;
+$primary-invert: findColorInvert($primary);
+$twitter: #4099FF;
+$twitter-invert: findColorInvert($twitter);
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+  "white": ($white, $black),
+  "black": ($black, $white),
+  "light": ($light, $light-invert),
+  "dark": ($dark, $dark-invert),
+  "primary": ($primary, $primary-invert),
+  "info": ($info, $info-invert),
+  "success": ($success, $success-invert),
+  "warning": ($warning, $warning-invert),
+  "danger": ($danger, $danger-invert),
+  "twitter": ($twitter, $twitter-invert)
+);
+
+@import "~bulmaswatch/materia/_variables.scss";
+
+$font_path: '~@/assets/fonts/';
+
+@font-face {
+  font-family: 'Ford Antenna Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url($font-path + 'Antenna/FordAntenna-Regular.otf'); /* For IE6-8 */
+}
+
+@font-face {
+  font-family: 'Ford Antenna Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url($font-path + 'Antenna/FordAntennaCond-Regular.otf');
+}
+
+// Links
+$link: $white;
+$link-invert: $white;
+$link-hover: $white;
+$link-focus-border: $white;
+
+// Fonts
+$family-sans-serif: "Ford Antenna Regular", "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+@import "~bulmaswatch/materia/_overrides.scss";

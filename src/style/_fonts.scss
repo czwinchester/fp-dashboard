@@ -1,0 +1,25 @@
+$font_path: '~@/assets/fonts/';
+
+@font-face {
+  font-family: 'Ford Antenna Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url($font-path + 'Antenna/FordAntenna-Regular.otf'); /* For IE6-8 */
+}
+
+@font-face {
+  font-family: 'Ford Antenna Regular';
+  font-weight: bold;
+  src: url($font-path + 'Antenna/FordAntenna-Bold.otf'); /* For IE6-8 */
+}
+
+@font-face {
+  font-family: 'Ford Antenna Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: url($font-path + 'Antenna/FordAntennaCond-Regular.otf');
+}
+
+// Fonts
+$family-sans-serif: "Ford Antenna Regular", "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-sans-serif-cond: "Ford Antenna Condensed", "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
