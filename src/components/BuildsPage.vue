@@ -14,7 +14,7 @@ export default {
       builds: [],
       headings: [
         'Application',
-        'Operating System',
+        'OS',
         'Build Name',
         'Region',
         'Status',
@@ -37,6 +37,5 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
 </style>

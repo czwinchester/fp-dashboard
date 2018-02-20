@@ -12,7 +12,7 @@
           </span>
           <h1 class="title" id="header-logo">
             <img id="header-icon" src="./assets/img/fp-icon-xl.svg">
-            <span id="header-text"><b>Ford</b>Pass Dashboard</span>
+            <span id="header-text"><b>Ford</b>Pass <b>Dashboard</b></span>
           </h1>
           <md-field md-clearable>
             <md-icon>search</md-icon>
@@ -22,17 +22,17 @@
         </div>
       </div>
     </section>
-    <section>
-      <div class="container">
+    <!--<section>-->
+      <!--<div class="container">-->
         <router-view/>
-      </div>
-    </section>
+      <!--</div>-->
+    <!--</section>-->
 
   </div>
 </template>
 
 <script>
-  export default {
+export default {
   name: 'App',
   metaInfo: {
     title: 'FordPass Dashboard'
@@ -61,7 +61,6 @@
   }
 
   .tab a {
-    color: $primary-invert;
     font-family: $family-sans-serif;
     font-size: 1rem;
     padding-right: 1.7rem;
@@ -69,6 +68,7 @@
 
   #header-text {
     font-family: 'Ford Antenna Regular', sans-serif;
+    color: $ford;
   }
 
   #header-icon {
@@ -80,9 +80,12 @@
     margin-bottom: 0px;
   }
 
+  .container {
+    margin-left: 70px;
+  }
+
   .hero-body {
     padding-top: 25px !important;
-    padding-left: 54px;
     padding-bottom: 25px !important;
   }
 
@@ -98,4 +101,5 @@
 
   .md-input {
   }
+
 </style>

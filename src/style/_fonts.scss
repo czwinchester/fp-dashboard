@@ -20,6 +20,12 @@ $font_path: '~@/assets/fonts/';
   src: url($font-path + 'Antenna/FordAntennaCond-Regular.otf');
 }
 
+@font-face {
+  font-family: 'Ford Antenna Condensed';
+  font-weight: bold;
+  src: url($font-path + 'Antenna/FordAntennaCond-Bold.otf')
+}
+
 // Fonts
 $family-sans-serif: "Ford Antenna Regular", "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $family-sans-serif-cond: "Ford Antenna Condensed", "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;

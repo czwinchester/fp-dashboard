@@ -1,9 +1,7 @@
 <template>
-  <thead id="builds-table-header">
-    <tr>
-      <th v-for="heading in headings">{{heading}}</th>
-    </tr>
-  </thead>
+  <span id="builds-table-header-row" class="columns">
+    <span class="builds-table-header column is-2" v-for="heading in headings">{{heading}}</span>
+  </span>
 </template>
 
 <script>
@@ -18,10 +16,14 @@ export default {
 }
 </script>
 
-<style>
-  th {
-    font-size: 1.3em;
-    padding: 2rem 2rem;
+<style lang="scss" scoped>
+  @import "~styles/main.scss";
+
+  .builds-table-header {
+    font-size: 1.4em;
+    padding-bottom: 0px;
     font-family: "Ford Antenna Condensed", sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
   }
 </style>

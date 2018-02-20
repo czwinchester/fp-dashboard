@@ -14,7 +14,7 @@ Then(/^the latest builds table should be visible$/, () => {
   return buildsPage.assert.visible('@buildsTable')
 })
 Then(/^the latest builds should be displayed in the table$/, () => {
-  return client.assert.elementCount('.build', 28)
+  return client.assert.elementCount('.builds-table-row', 28)
 })
 // Then(/^the build status must be displayed in the table for each record$/, () => {
 //   const buildsPage = client.page.builds()

@@ -1,5 +1,5 @@
 <template>
-  <div class = "badge badge-style" :style="computedStyle">
+  <div class="badge" :style="computedStyle">
     {{status}}
   </div>
 </template>
@@ -16,19 +16,19 @@ export default {
     computedStyle: function () {
       let style = { 'background-color': '' }
       switch (this.status) {
-        case 'no_build':
+        case 'No build':
           style['background-color'] = '#d00c1b' // red
           break
-        case 'ok':
+        case 'On time':
           style['background-color'] = '#12b664' // green
           break
-        case 'delayed':
+        case 'Delayed':
           style['background-color'] = '#e58b00' // orange
           break
         default:
           style['background-color'] = '#12b664'
       }
-      console.log(style)
+      // console.log(style)
       return style
     }
   },
@@ -41,16 +41,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .badge {
-    font-family: 'Ford Antenna Condensed', 'Helvetica' ;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    text-align: center;
-    margin: 10px 5px 0px 3px;
-    width: 85px;
-    height: 20px;
+  @import '~styles/main.scss';
+
+  div.badge {
+    color: $white;
+    width: 150px;
+    margin: 0 auto;
     border-radius: 4px;
   }
 

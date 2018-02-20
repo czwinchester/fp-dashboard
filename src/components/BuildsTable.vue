@@ -1,8 +1,8 @@
 <template>
-  <table id="builds-table">
+  <div id="builds-table">
     <BuildsTableHeader :headings="headings"></BuildsTableHeader>
     <BuildsTableRow :headings="headings" :build="build" v-for="build in builds"></BuildsTableRow>
-  </table>
+  </div>
 </template>
 
 <script>
@@ -29,7 +29,8 @@ export default {
 
 <style lang="scss" scoped>
   table {
-    margin-top: 20px;
+    // margin-top: 20px;
+    width: 100%;
   }
 
 </style>

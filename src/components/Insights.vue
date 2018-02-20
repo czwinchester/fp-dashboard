@@ -5,7 +5,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'Insights'
-  }
+export default {
+  name: 'Insights'
+}
 </script>
+
+<style></style>

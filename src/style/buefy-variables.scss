@@ -2,12 +2,14 @@
 @import "~bulma/sass/utilities/_all";
 
 // Set your colors
-$primary: #f4f4f4;
+$primary: white;
 $primary-invert: findColorInvert($primary);
 $twitter: #4099FF;
 $twitter-invert: findColorInvert($twitter);
 $ford: #102b4e;
 $ford-invert: findColorInvert($ford);
+$grey: #f4f4f4;
+$grey-invert: findColorInvert($grey);
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: (
@@ -24,7 +26,7 @@ $colors: (
 );
 
 // Links
-$link: $primary-invert;
+$link: $ford;
 $link-invert: $ford;
 $link-hover: $ford;
 $link-focus-border: $ford;
