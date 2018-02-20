@@ -7,7 +7,7 @@ describe('App.vue', () => {
     let wrapper
     beforeAll(() => {
       wrapper = shallow(App, {router})
-      wrapper.find('builds-tab').trigger('click')
+      wrapper.find('#builds-tab').trigger('click')
     })
 
     test('the builds tab should be active', () => {
@@ -20,7 +20,7 @@ describe('App.vue', () => {
 
     beforeAll(() => {
       wrapper = shallow(App, {router})
-      wrapper.find('#metrics-tab').trigger('click')
+      wrapper.find('#insights-tab').trigger('click')
     })
 
     test('the metrics tab should be active', () => {

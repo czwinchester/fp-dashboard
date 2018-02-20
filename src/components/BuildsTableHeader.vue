@@ -18,7 +18,6 @@ export default {
 
 <style lang="scss" scoped>
   @import "~styles/main.scss";
-
   .builds-table-header {
     font-size: 1.4em;
     padding-bottom: 0px;

@@ -9,7 +9,7 @@ describe('BuildsTableRow.vue', () => {
       name: 'FordPass CN v2.0 Stage',
       region: 'CN',
       status: 'no_build',
-      release_time: '23-03-18T17:18:19Z'
+      release_time: '2018-03-03T17:18:19.000Z'
     }
     const wrapper = shallow(BuildsTableRow, {
       propsData: {
@@ -18,20 +18,41 @@ describe('BuildsTableRow.vue', () => {
     })
     expect(wrapper.vm.build).toBe(stubBuild)
   })
-  test('should have a table cell for each heading', () => {
-    const stubBuild = {
-      app: 'FordPass',
-      os: 'Android',
-      name: 'FordPass CN v2.0 Stage',
-      region: 'CN',
-      status: 'no_build',
-      release_time: '23-03-18T17:18:19Z'
-    }
-    const wrapper = shallow(BuildsTableRow, {
-      propsData: {
-        build: stubBuild
+  describe('os icon', () => {
+    test('should display android icon when passed android build', () => {
+      const androidBuild = {
+        app: 'FordPass',
+        os: 'Android',
+        name: 'FordPass CN v2.0 Stage',
+        region: 'CN',
+        status: 'no_build',
+        release_time: '2018-03-21T17:18:19.000Z'
       }
+      const wrapper = shallow(BuildsTableRow, {
+        propsData: {
+          build: androidBuild
+        }
+      })
+      const expectedClasses = ['fa', 'fa-android']
+      expect(wrapper.find('i').classes()).toEqual(expectedClasses)
     })
-    expect(wrapper.findAll('td').length).toEqual(6)
+
+    test('should display iOS icon when passed iOS build', () => {
+      const iOSBuild = {
+        app: 'FordPass',
+        os: 'iOS',
+        name: 'FordPass CN v2.0 Stage',
+        region: 'CN',
+        status: 'no_build',
+        release_time: '2018-03-21T17:18:19.000Z'
+      }
+      const wrapper = shallow(BuildsTableRow, {
+        propsData: {
+          build: iOSBuild
+        }
+      })
+      const expectedClasses = ['fa', 'fa-apple']
+      expect(wrapper.find('i').classes()).toEqual(expectedClasses)
+    })
   })
 })
