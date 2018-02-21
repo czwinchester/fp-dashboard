@@ -1,9 +1,10 @@
-@import '~styles/vue-material.scss';
 @import '~bulmaswatch/materia/_variables.scss';
 @import '~styles/buefy-variables.scss';
 @import '~styles/_fonts.scss';
+@import '~styles/vue-material.scss';
 
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
 @import "~bulmaswatch/materia/_overrides.scss";
+

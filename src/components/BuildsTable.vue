@@ -59,6 +59,7 @@ export default {
 
   .builds-table-header {
     font-size: 1.4em;
+    padding-top: 25px;
     padding-bottom: 0px;
     font-family: "Ford Antenna Condensed", sans-serif;
     text-align: center;

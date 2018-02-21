@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
-    <section class="hero is-primary">
+    <section>
       <div class="hero-body">
         <div class="container">
           <span class="tab">
@@ -12,22 +12,12 @@
           </span>
           <h1 class="title" id="header-logo">
             <img id="header-icon" src="./assets/img/fp-icon-xl.svg">
-            <span id="header-text"><b>Ford</b>Pass <b>Dashboard</b></span>
+            <span id="header-text"><b>Ford</b>Pass <b>Builds</b></span>
           </h1>
-          <md-field md-clearable>
-            <md-icon>search</md-icon>
-            <label>Search</label>
-            <md-input v-model="search"></md-input>
-          </md-field>
         </div>
       </div>
     </section>
-    <!--<section>-->
-      <!--<div class="container">-->
-        <router-view/>
-      <!--</div>-->
-    <!--</section>-->
-
+      <router-view/>
   </div>
 </template>
 
@@ -35,7 +25,7 @@
 export default {
   name: 'App',
   metaInfo: {
-    title: 'FordPass Dashboard'
+    title: 'FordPass Builds'
   },
   data: function () {
     return {
@@ -48,16 +38,16 @@ export default {
 <style lang="scss">
 @import '~styles/main.scss';
 
-  body {
-    font-family: $family-sans-serif;
-  }
-
   path {
-    fill: $primary-invert;
+    fill: white;
   }
 
   path + path {
     fill: none;
+  }
+
+  body {
+    font-family: $family-sans-serif;
   }
 
   .tab a {
@@ -68,7 +58,7 @@ export default {
 
   #header-text {
     font-family: 'Ford Antenna Regular', sans-serif;
-    color: $ford;
+    color: $primary-invert;
   }
 
   #header-icon {
@@ -97,9 +87,6 @@ export default {
     font-family: $family-sans-serif;
     width: 20vw;
     margin-bottom: 0px;
-  }
-
-  .md-input {
   }
 
 </style>

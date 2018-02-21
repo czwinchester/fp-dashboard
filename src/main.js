@@ -5,11 +5,11 @@ import App from './App'
 import router from './router'
 import moment from 'moment'
 import 'font-awesome/css/font-awesome.css'
-import VueMaterial from 'vue-material'
-import 'vue-material/dist/vue-material.min.css'
 import Buefy from 'buefy'
 import 'buefy/lib/buefy.css'
 import lodash from 'lodash';
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.min.css'
 
 Vue.use(VueMaterial)
 Vue.use(Buefy)

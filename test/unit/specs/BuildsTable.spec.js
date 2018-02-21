@@ -21,31 +21,13 @@ describe('BuildsTable.vue', () => {
   describe('order by status', () => {
     test('No build should come before On time', () => {
       const noBuild = {
-        'id': 99,
-        'name': 'FordPass SA (Stage)',
-        'os': 'android',
-        'release_time': '2017-08-10T00:13:52.000Z',
-        'status' : 'No build',
-        'latest': 1,
-        'region': 'SA',
+        'status' : 'No build'
       }
       const onTime1 = {
-        'id': 99,
-        'name': 'FordPass SA (Stage)',
-        'os': 'android',
-        'release_time': '2017-08-10T00:13:52.000Z',
-        'status' : 'On time',
-        'latest': 1,
-        'region': 'SA',
+        'status' : 'On time'
       }
       const onTime2 = {
-        'id': 99,
-        'name': 'FordPass SA (Stage)',
-        'os': 'android',
-        'release_time': '2017-08-10T00:13:52.000Z',
-        'status' : 'On time',
-        'latest': 1,
-        'region': 'SA',
+        'status' : 'On time'
       }
 
       const stubBuilds = [onTime1, onTime2, noBuild]
@@ -57,7 +39,9 @@ describe('BuildsTable.vue', () => {
         }
       })
 
-      expect(wrapper.vm.builds[0]).toEqual(noBuild)
+      expect(wrapper.vm.builds[0].status).toEqual('No build')
+      expect(wrapper.vm.builds[1].status).toEqual('On time')
+      expect(wrapper.vm.builds[2].status).toEqual('On time')
     })
   })
 })
