@@ -1,9 +1,16 @@
 import BuildsPage from '@/components/BuildsPage.vue'
 import router from '@/router'
-import mockAxios from 'jest-mock-axios/dist/index'
-import {shallow} from '@vue/test-utils'
+import mockAxios from 'jest-mock-axios'
+import { shallow, mount } from '@vue/test-utils'
 
 describe('BuildsPage.vue', () => {
+
+  afterEach(() => {
+    // cleaning up the mess left behind the previous test
+    mockAxios.reset()
+  })
+
+
   describe('when the BuildsPage is mounted', () => {
     const stubBuilds = [
       {
@@ -47,14 +54,83 @@ describe('BuildsPage.vue', () => {
 
     test('should set the latestBuilds prop with response data from the service', (done) => {
       const wrapper = shallow(BuildsPage)
-      expect(wrapper.vm.latestBuilds).toBe(undefined)
+      expect(wrapper.vm.builds).toEqual([])
       mockAxios.mockResponse({data: stubBuilds})
       wrapper.vm.$nextTick(() => {
         wrapper.vm.$nextTick(() => {
-          expect(wrapper.vm.builds).toBe(stubBuilds)
+          wrapper.vm.$nextTick(() => {
+            expect(wrapper.vm.builds).toEqual(stubBuilds)
+            done()
+          })
         })
-        done()
       })
     })
   })
+
+  describe('search bar', () => {
+    test('search build name', () => {
+      const cn1 = {"uid":11,"name":"FordPass CN 2.0","os":"Android","shortversion":"2.0.0","longversion":"2.0.0","release_time":"2018-02-13T12:12:45.000Z","status":"No build","latest":1,"created_at":"2018-02-19T22:54:34.000Z","updated_at":"2018-02-19T22:54:34.000Z"}
+
+      const cn2 = {"uid":13,"name":"FordPass CN 2.0","os":"iOS","shortversion":"2.0","longversion":"2.0","release_time":"2018-02-14T11:38:08.000Z","status":"No build","latest":1,"created_at":"2018-02-19T22:54:34.000Z","updated_at":"2018-02-19T22:54:34.000Z"}
+
+      const na = {"uid":17,"name":"FordPass NA 2.0","os":"iOS","shortversion":"2.0","longversion":"2.0","release_time":"2018-02-14T11:24:48.000Z","status":"No build","latest":1,"created_at":"2018-02-19T22:54:34.000Z","updated_at":"2018-02-19T22:54:34.000Z"}
+
+      const stubBuilds = [cn1, cn2, na]
+
+      const wrapper = shallow(BuildsPage, {
+        data: {
+          search: 'CN',
+          builds: stubBuilds
+        }
+      })
+
+      expect(wrapper.vm.searchedBuilds.length).toEqual(2)
+    })
+
+    test('search os', () => {
+      const android = { name: 'apples', os: 'Android'}
+      const iOS = { name: 'bananas', os: 'iOS'}
+
+      const stubBuilds = [
+        android,
+        android,
+        android,
+        iOS,
+        iOS
+      ]
+
+      const wrapper = shallow(BuildsPage, {
+        data: {
+          search: 'droid',
+          builds: stubBuilds
+        }
+      })
+
+      expect(wrapper.vm.searchedBuilds.length).toEqual(3)
+    })
+
+    test('search name and os', () => {
+      const androidApples = { name: 'apples', os: 'Android' }
+      const androidBananas = { name: 'bananas', os: 'Android' }
+      const iOSBananas = { name: 'bananas', os: 'iOS' }
+
+      const stubBuilds = [
+        androidApples,
+        androidApples,
+        androidBananas,
+        iOSBananas,
+        iOSBananas
+      ]
+
+      const wrapper = shallow(BuildsPage, {
+        data: {
+          search: 'bananas droid',
+          builds: stubBuilds
+        }
+      })
+
+      expect(wrapper.vm.searchedBuilds.length).toEqual(1)
+    })
+  })
+
 })

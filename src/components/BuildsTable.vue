@@ -1,6 +1,6 @@
 <!--suppress ALL -->
 <template>
-  <div>
+  <div id="builds-table">
     <div>
       <div class="builds-table-header-row columns">
         <span class="builds-table-header column is-2" v-for="heading in headings">{{heading}}</span>

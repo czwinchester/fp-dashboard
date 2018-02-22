@@ -87,8 +87,8 @@ describe('BuildsTable.vue', () => {
         }
       })
 
-      expect(wrapper.vm.builds[0].status).toEqual('No build')
-      expect(wrapper.vm.builds[1].status).toEqual('Delayed')
+      expect(wrapper.vm.builds[0]).toBe(noBuild)
+      expect(wrapper.vm.builds[1]).toBe(delayed)
 
     })
 

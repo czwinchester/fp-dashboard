@@ -14,7 +14,7 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js",
-    "watch": "jest --config test/unit/jest.conf/js --coverage --watch"
+    "watch": "jest --config test/unit/jest.conf.js --coverage --watch"
   },
   "dependencies": {
     "buefy": "^0.6.3",

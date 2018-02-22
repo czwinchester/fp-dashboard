@@ -9,8 +9,8 @@ Given(/^I access the landing page$/, () => {
     .navigate()
 })
 
-Then(/^the title is FordPass Dashboard$/, () => {
-  return client.assert.title('FordPass Dashboard')
+Then(/^the title is FordPass Builds$/, () => {
+  return client.assert.title('FordPass Builds')
 })
 
 Then(/^the FordPass header logo should be displayed$/, () => {

@@ -7,13 +7,15 @@
         <md-input v-model="search"></md-input>
       </md-field>
     </div>
-    <BuildsTable :headings="headings" :builds="builds"></BuildsTable>
+    <BuildsTable :headings="headings"
+                 :builds="searchedBuilds"></BuildsTable>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import BuildsTable from '@/components/BuildsTable'
+import BuildsTableRow from '@/components/BuildsTableRow'
 export default {
   name: 'Builds',
   data: () => {
@@ -27,30 +29,53 @@ export default {
         'Status',
         'Release Time'
       ],
-      search: null
+      search: ''
+    }
+  },
+  computed: {
+    searchedBuilds: function () {
+      let vm = this
+      return vm.builds.filter(function(build) {
+        return ((vm.searchBuilds(build, vm.search)))
+        // return (build.name.toLowerCase().includes(vm.search.toLowerCase()) ||
+        //         build.os.toLowerCase().includes(vm.search.toLowerCase()))
+      })
     }
   },
   methods: {
     async getLatestBuilds () {
       const response = await axios.get(process.env.API_BASE_URL + 'builds')
-      //this.builds = this.$_.sortBy(response.data, 'status')
       this.builds = response.data
-      // console.log(this.builds.sort((a, b) => {
-      //   if ((a.status === 'No build' && b.status === 'On time') ||
-      //     (a.status === 'Delayed' && b.status === 'On time') ||
-      //     (a.status === 'No build' && b.status === 'Delayed')) {
-      //     return -1
-      //   } else if ((a.status === 'On time' && b.status === 'No build') ||
-      //     (a.status === 'On time' && b.status === 'Delayed') ||
-      //     (a.status === 'Delayed' && b.status === 'No build')) {
-      //     return 1
-      //   }
-      //   return 0
-      // }))
+    },
+    searchBuilds: function (build, searchString) {
+      console.log(this.trimStatus(searchString))
+      let buildString = build.name + ' ' + build.os
+      let split = searchString.toLowerCase().split(' ')
+      let found = 0
+      split.forEach(function(word) {
+        if (buildString.toLowerCase().includes(word)) {
+          found += 1
+        }
+      })
+      if (found === split.length) {
+        return true
+      } else {
+        return false
+      }
+    },
+    trimStatus: function (searchString) {
+      if (searchString.toLowerCase().includes('no build') ||
+          searchString.toLowerCase().includes('on time') ||
+          searchString.toLowerCase().includes('delayed')) {
+        return searchString.replace('no build', '').replace('on time', '').replace('delayed', '')
+      }
+      else {
+        return searchString
+      }
     }
   },
   components: {
-    BuildsTable
+    BuildsTable, BuildsTableRow
   },
   mounted () {
     this.getLatestBuilds()
@@ -69,7 +94,7 @@ export default {
 
   @import "~vue-material/dist/theme/all"; // Apply the theme
 
-  @import '~styles/main.scss';
+  @import "~styles/main.scss";
 
   #search-bar {
     height: 75px;

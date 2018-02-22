@@ -4,6 +4,7 @@ module.exports = {
   url: devServerUrl,
   elements: {
     buildsTable: '#builds-table',
-    tableHeaderStatus: '#status-header'
+    tableHeaderStatus: '#status-header',
+    searchBar: '#search-bar'
   }
 }

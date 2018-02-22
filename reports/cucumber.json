@@ -25,7 +25,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 28878000000
+              "duration": 35305000000
             }
           },
           {
@@ -34,11 +34,11 @@
             "line": 5,
             "name": "the builds navbar button has been clicked",
             "match": {
-              "location": "test/e2e/step-definitions/builds.steps.js:8"
+              "location": "test/e2e/step-definitions/builds.steps.js:9"
             },
             "result": {
               "status": "passed",
-              "duration": 137000000
+              "duration": 160000000
             }
           },
           {
@@ -47,11 +47,11 @@
             "line": 8,
             "name": "the latest builds table should be visible",
             "match": {
-              "location": "test/e2e/step-definitions/builds.steps.js:12"
+              "location": "test/e2e/step-definitions/builds.steps.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 34000000
+              "duration": 36000000
             }
           },
           {
@@ -60,11 +60,74 @@
             "line": 9,
             "name": "the latest builds should be displayed in the table",
             "match": {
-              "location": "test/e2e/step-definitions/builds.steps.js:16"
+              "location": "test/e2e/step-definitions/builds.steps.js:19"
             },
             "result": {
               "status": "passed",
-              "duration": 11000000
+              "duration": 13000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "builds;searching-builds",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Searching builds",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the landing page has been accessed",
+            "match": {
+              "location": "test/e2e/step-definitions/builds.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1639000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "the builds navbar button has been clicked",
+            "match": {
+              "location": "test/e2e/step-definitions/builds.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I search for a build or builds",
+            "match": {
+              "location": "test/e2e/step-definitions/builds.steps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the appropriate builds should be displayed",
+            "match": {
+              "location": "test/e2e/step-definitions/builds.steps.js:28"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 12000000,
+              "error_message": "Testing if element <.builds-table-row> has count: 1 - Expected \"1\" but got: \"26\"\n\n    at World.<anonymous> (/Users/tstone10/workspace/fp-dashboard/test/e2e/step-definitions/builds.steps.js:30:28)"
             }
           }
         ]
@@ -97,7 +160,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3658000000
+              "duration": 5101000000
             }
           },
           {
@@ -110,7 +173,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 13000000
+              "duration": 9000000
             }
           },
           {
@@ -123,7 +186,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 31000000
+              "duration": 29000000
             }
           }
         ]
@@ -156,7 +219,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 733000000
+              "duration": 874000000
             }
           },
           {
@@ -169,7 +232,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 503000000
+              "duration": 589000000
             }
           },
           {
@@ -182,7 +245,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 34000000
+              "duration": 30000000
             }
           }
         ]
@@ -215,20 +278,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 316000000
+              "duration": 403000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 6,
-            "name": "the title is FordPass Dashboard",
+            "name": "the title is FordPass Builds",
             "match": {
               "location": "test/e2e/step-definitions/landingPage.steps.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 11000000
+              "duration": 17000000
             }
           },
           {
@@ -241,7 +304,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 31000000
+              "duration": 25000000
             }
           },
           {
@@ -254,7 +317,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 25000000
+              "duration": 24000000
             }
           },
           {
