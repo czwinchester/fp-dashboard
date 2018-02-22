@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div id="search-bar">
+    <div>
       <md-field md-inline md-clearable>
         <md-icon>search</md-icon>
         <label>Search</label>
-        <md-input v-model="search"></md-input>
+        <md-input id="search-bar" v-model="search"></md-input>
       </md-field>
     </div>
     <BuildsTable :headings="headings"

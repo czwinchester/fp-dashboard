@@ -25,7 +25,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 35305000000
+              "duration": 35741000000
             }
           },
           {
@@ -38,7 +38,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 160000000
+              "duration": 60000000
             }
           },
           {
@@ -51,7 +51,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 36000000
+              "duration": 31000000
             }
           },
           {
@@ -64,7 +64,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 13000000
+              "duration": 11000000
             }
           }
         ]
@@ -87,7 +87,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1639000000
+              "duration": 621000000
             }
           },
           {
@@ -100,7 +100,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 63000000
+              "duration": 57000000
             }
           },
           {
@@ -113,7 +113,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 42000000
+              "duration": 137000000
             }
           },
           {
@@ -125,212 +125,8 @@
               "location": "test/e2e/step-definitions/builds.steps.js:28"
             },
             "result": {
-              "status": "failed",
-              "duration": 12000000,
-              "error_message": "Testing if element <.builds-table-row> has count: 1 - Expected \"1\" but got: \"26\"\n\n    at World.<anonymous> (/Users/tstone10/workspace/fp-dashboard/test/e2e/step-definitions/builds.steps.js:30:28)"
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "keyword": "Feature",
-    "name": "Google Search",
-    "line": 3,
-    "id": "google-search",
-    "tags": [],
-    "uri": "test/e2e/features/google.feature",
-    "elements": [
-      {
-        "id": "google-search;searching-google",
-        "keyword": "Scenario",
-        "line": 5,
-        "name": "Searching Google",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "I open Google's search page",
-            "match": {
-              "location": "test/e2e/step-definitions/google.js:6"
-            },
-            "result": {
               "status": "passed",
-              "duration": 5101000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "the title is \"Google\"",
-            "match": {
-              "location": "test/e2e/step-definitions/google.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 9000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 9,
-            "name": "the Google search form exists",
-            "match": {
-              "location": "test/e2e/step-definitions/google.js:16"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 29000000
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "keyword": "Feature",
-    "name": "Insights page",
-    "line": 1,
-    "id": "insights-page",
-    "tags": [],
-    "uri": "test/e2e/features/insights.feature",
-    "elements": [
-      {
-        "id": "insights-page;viewing-insights",
-        "keyword": "Scenario",
-        "line": 7,
-        "name": "Viewing insights",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "I access the landing page",
-            "match": {
-              "location": "test/e2e/step-definitions/landingPage.steps.js:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 874000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 5,
-            "name": "I have clicked on the insights tab",
-            "match": {
-              "location": "test/e2e/step-definitions/insights.steps.js:6"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 589000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "the insights page header should be displayed",
-            "match": {
-              "location": "test/e2e/step-definitions/insights.steps.js:10"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 30000000
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "keyword": "Feature",
-    "name": "Landing page",
-    "line": 1,
-    "id": "landing-page",
-    "tags": [],
-    "uri": "test/e2e/features/landingPage.feature",
-    "elements": [
-      {
-        "id": "landing-page;accessing-dashboard-landing-page",
-        "keyword": "Scenario",
-        "line": 3,
-        "name": "Accessing dashboard landing page",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 5,
-            "name": "I access the landing page",
-            "match": {
-              "location": "test/e2e/step-definitions/landingPage.steps.js:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 403000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 6,
-            "name": "the title is FordPass Builds",
-            "match": {
-              "location": "test/e2e/step-definitions/landingPage.steps.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 17000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 7,
-            "name": "the FordPass header logo should be displayed",
-            "match": {
-              "location": "test/e2e/step-definitions/landingPage.steps.js:16"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 25000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 8,
-            "name": "the Builds tab should be displayed",
-            "match": {
-              "location": "test/e2e/step-definitions/landingPage.steps.js:20"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 24000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 9,
-            "name": "the latest builds table should be displayed",
-            "match": {
-              "location": "test/e2e/step-definitions/landingPage.steps.js:24"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 25000000
+              "duration": 10000000
             }
           }
         ]
