@@ -131,6 +131,50 @@ describe('BuildsPage.vue', () => {
 
       expect(wrapper.vm.searchedBuilds.length).toEqual(1)
     })
+
+    test('search status', () => {
+      const onTime = { name: 'apples', status: 'On time' }
+      const noBuild = { name: 'bananas', status: 'No build' }
+      const delayed = { name: 'coconuts', status: 'Delayed' }
+
+      const stubBuilds = [
+        onTime,
+        noBuild,
+        noBuild
+      ]
+
+      const wrapper = shallow(BuildsPage, {
+        data: {
+          search: 'no build',
+          builds: stubBuilds
+        }
+      })
+
+      expect(wrapper.vm.searchedBuilds.length).toEqual(2)
+    })
+
+    test('search name, os and status', () => {
+      const androidDelayedCN = { name: 'apples cn', status: 'Delayed', os: 'Android' }
+      const iOSDelayedNA = { name: 'bananas na', status: 'Delayed', os: 'iOS' }
+      const iOSDelayedCN = { name: 'apples cn', status: 'Delayed', os: 'iOS' }
+      const androidOnTimeCN = { name: 'coconuts cn', status: 'On time', os: 'Android' }
+
+      const stubBuilds = [
+        androidDelayedCN,
+        iOSDelayedNA,
+        iOSDelayedCN,
+        androidOnTimeCN
+      ]
+
+      const wrapper = shallow(BuildsPage, {
+        data: {
+          search: 'on time android cn',
+          builds: stubBuilds
+        }
+      })
+
+      expect(wrapper.vm.searchedBuilds[0]).toEqual(androidOnTimeCN)
+    })
   })
 
 })

@@ -37,8 +37,6 @@ export default {
       let vm = this
       return vm.builds.filter(function(build) {
         return ((vm.searchBuilds(build, vm.search)))
-        // return (build.name.toLowerCase().includes(vm.search.toLowerCase()) ||
-        //         build.os.toLowerCase().includes(vm.search.toLowerCase()))
       })
     }
   },
@@ -48,8 +46,7 @@ export default {
       this.builds = response.data
     },
     searchBuilds: function (build, searchString) {
-      console.log(this.trimStatus(searchString))
-      let buildString = build.name + ' ' + build.os
+      let buildString = build.name + ' ' + build.os + ' ' + build.status
       let split = searchString.toLowerCase().split(' ')
       let found = 0
       split.forEach(function(word) {
@@ -61,16 +58,6 @@ export default {
         return true
       } else {
         return false
-      }
-    },
-    trimStatus: function (searchString) {
-      if (searchString.toLowerCase().includes('no build') ||
-          searchString.toLowerCase().includes('on time') ||
-          searchString.toLowerCase().includes('delayed')) {
-        return searchString.replace('no build', '').replace('on time', '').replace('delayed', '')
-      }
-      else {
-        return searchString
       }
     }
   },
@@ -123,7 +110,5 @@ export default {
   .md-field.md-theme-default > .md-icon::after {
     background-color: transparent;
   }
-
-
 
 </style>
