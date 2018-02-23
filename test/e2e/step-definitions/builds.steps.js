@@ -30,10 +30,9 @@ Then(/^the appropriate builds should be displayed$/, () => {
   return buildsPage.assert.elementCount('.builds-table-row', 1)
 })
 
-// Then(/^the build status must be displayed in the table for each record$/, () => {
-//   const buildsPage = client.page.builds()
-//   return client.assert.elementContainsTextCount('td', 'no_build', 1) &&
-//     client.assert.elementContainsTextCount('td', 'delayed', 25) &&
-//     client.assert.elementContainsTextCount('td', 'ok', 2) &&
-//     buildsPage.assert.visible('@tableHeaderStatus')
-// })
+Then(/^the build status must be displayed in the table for each record$/, () => {
+  const buildsPage = client.page.builds()
+  return client.assert.elementContainsTextCount('span', 'No build', 9) &&
+    client.assert.elementContainsTextCount('span', 'Delayed', 1) &&
+    client.assert.elementContainsTextCount('span', 'On time', 16)
+})

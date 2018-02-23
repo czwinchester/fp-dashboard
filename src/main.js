@@ -7,7 +7,7 @@ import moment from 'moment'
 import 'font-awesome/css/font-awesome.css'
 import Buefy from 'buefy'
 import 'buefy/lib/buefy.css'
-import lodash from 'lodash';
+import lodash from 'lodash'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 
@@ -15,7 +15,7 @@ Vue.use(VueMaterial)
 Vue.use(Buefy)
 Vue.config.productionTip = false
 Vue.prototype.moment = moment
-Object.defineProperty(Vue.prototype, '$_', { value: lodash });
+Object.defineProperty(Vue.prototype, '$_', { value: lodash })
 
 /* eslint-disable no-new */
 new Vue({

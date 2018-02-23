@@ -13,8 +13,7 @@ module.exports = {
   // commands: [buildsCommands],
   elements: {
     buildsTable: '#builds-table',
-    tableHeaderStatus: '#status-header',
-    searchBar: '#search-bar',
+    searchBar: '#search-bar-input',
     buildsTableRow: '.builds-table-row'
   }
 }

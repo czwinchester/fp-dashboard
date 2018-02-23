@@ -16,14 +16,15 @@ $font_path: '~@/assets/fonts/';
 @font-face {
   font-family: 'Ford Antenna Condensed';
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   src: url($font-path + 'Antenna/FordAntennaCond-Regular.otf');
 }
 
 @font-face {
   font-family: 'Ford Antenna Condensed';
+  font-style: normal;
   font-weight: bold;
-  src: url($font-path + 'Antenna/FordAntennaCond-Bold.otf')
+  src: url($font-path + 'Antenna/FordAntennaCond-Medium.otf')
 }
 
 // Fonts

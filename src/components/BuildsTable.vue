@@ -3,7 +3,7 @@
   <div id="builds-table">
     <div>
       <div class="builds-table-header-row columns">
-        <span class="builds-table-header column is-2" v-for="heading in headings">{{heading}}</span>
+        <span class="builds-table-header column is-2" v-for="heading in headings"><b>{{heading}}</b></span>
       </div>
       <BuildsTableRow :headings="headings" :build="build" v-for="build in sortedBuilds"></BuildsTableRow>
     </div>
@@ -31,13 +31,13 @@ export default {
   },
   computed: {
     sortedBuilds: function () {
-      return this.builds.sort((a, b) => {
+      let vm = this
+      return vm.builds.sort((a, b) => {
         if ((a.status === 'No build' && b.status === 'On time') ||
           (a.status === 'Delayed' && b.status === 'On time') ||
           (a.status === 'No build' && b.status === 'Delayed')) {
           return -1
-        }
-        else if ((a.status === 'On time' && b.status === 'No build') ||
+        } else if ((a.status === 'On time' && b.status === 'No build') ||
           (a.status === 'On time' && b.status === 'Delayed') ||
           (a.status === 'Delayed' && b.status === 'No build')) {
           return 1

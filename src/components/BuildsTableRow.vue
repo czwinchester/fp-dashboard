@@ -19,6 +19,9 @@
 import BuildsTableRowStatusBadge from '@/components/BuildsTableRowStatusBadge'
 export default {
   name: 'BuildsTableRow',
+  computed: {
+
+  },
   methods: {
     computeRegion: (name) => {
       if (name.includes('CN')) {

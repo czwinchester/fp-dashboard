@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div>
+    <div id="search-bar">
       <md-field md-inline md-clearable>
         <md-icon>search</md-icon>
         <label>Search</label>
-        <md-input id="search-bar" v-model="search"></md-input>
+        <md-input id="search-bar-input" v-model="search"></md-input>
       </md-field>
     </div>
     <BuildsTable :headings="headings"
@@ -35,7 +35,7 @@ export default {
   computed: {
     searchedBuilds: function () {
       let vm = this
-      return vm.builds.filter(function(build) {
+      return vm.builds.filter(function (build) {
         return ((vm.searchBuilds(build, vm.search)))
       })
     }
@@ -49,7 +49,7 @@ export default {
       let buildString = build.name + ' ' + build.os + ' ' + build.status
       let split = searchString.toLowerCase().split(' ')
       let found = 0
-      split.forEach(function(word) {
+      split.forEach(function (word) {
         if (buildString.toLowerCase().includes(word)) {
           found += 1
         }

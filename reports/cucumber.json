@@ -25,7 +25,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 35741000000
+              "duration": 33363000000
             }
           },
           {
@@ -38,7 +38,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 60000000
+              "duration": 139000000
             }
           },
           {
@@ -64,7 +64,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 11000000
+              "duration": 9000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the build status must be displayed in the table for each record",
+            "match": {
+              "location": "test/e2e/step-definitions/builds.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24000000
             }
           }
         ]
@@ -87,7 +100,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 621000000
+              "duration": 838000000
             }
           },
           {
@@ -100,7 +113,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 57000000
+              "duration": 49000000
             }
           },
           {
@@ -113,7 +126,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 137000000
+              "duration": 140000000
             }
           },
           {
@@ -126,7 +139,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 10000000
+              "duration": 9000000
             }
           }
         ]
