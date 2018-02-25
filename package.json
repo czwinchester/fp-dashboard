@@ -14,7 +14,7 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js",
-    "watch": "jest --config test/unit/jest.conf.js --coverage --watch"
+    "watch": "jest --config test/unit/jest.conf.js --watch"
   },
   "dependencies": {
     "buefy": "^0.6.3",
@@ -28,6 +28,7 @@
     "mockdate": "^2.0.2",
     "nightwatch-cucumber": "^9.1.0",
     "vue": "^2.5.2",
+    "vue-i18n": "^7.4.2",
     "vue-material": "^1.0.0-beta-7",
     "vue-mdl": "^1.1.1",
     "vue-meta": "^1.4.3",

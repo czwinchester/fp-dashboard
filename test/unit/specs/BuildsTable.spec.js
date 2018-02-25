@@ -36,10 +36,10 @@ describe('BuildsTable.vue', () => {
         }
       })
 
-      expect(wrapper.vm.builds[0].status).toEqual('No build')
-      expect(wrapper.vm.builds[1].status).toEqual('No build')
-      expect(wrapper.vm.builds[2].status).toEqual('On time')
-      expect(wrapper.vm.builds[3].status).toEqual('On time')
+      expect(wrapper.vm.sortedBuilds[0].status).toEqual('No build')
+      expect(wrapper.vm.sortedBuilds[1].status).toEqual('No build')
+      expect(wrapper.vm.sortedBuilds[2].status).toEqual('On time')
+      expect(wrapper.vm.sortedBuilds[3].status).toEqual('On time')
 
     })
 
@@ -62,10 +62,10 @@ describe('BuildsTable.vue', () => {
         }
       })
 
-      expect(wrapper.vm.builds[0].status).toEqual('Delayed')
-      expect(wrapper.vm.builds[1].status).toEqual('Delayed')
-      expect(wrapper.vm.builds[2].status).toEqual('On time')
-      expect(wrapper.vm.builds[3].status).toEqual('On time')
+      expect(wrapper.vm.sortedBuilds[0].status).toEqual('Delayed')
+      expect(wrapper.vm.sortedBuilds[1].status).toEqual('Delayed')
+      expect(wrapper.vm.sortedBuilds[2].status).toEqual('On time')
+      expect(wrapper.vm.sortedBuilds[3].status).toEqual('On time')
     })
 
     test('Delayed should come after No build', () => {
@@ -87,8 +87,8 @@ describe('BuildsTable.vue', () => {
         }
       })
 
-      expect(wrapper.vm.builds[0]).toBe(noBuild)
-      expect(wrapper.vm.builds[1]).toBe(delayed)
+      expect(wrapper.vm.sortedBuilds[0]).toBe(noBuild)
+      expect(wrapper.vm.sortedBuilds[1]).toBe(delayed)
 
     })
 
@@ -130,21 +130,21 @@ describe('BuildsTable.vue', () => {
         }
       })
 
-      expect(wrapper.vm.builds[0]).toBe(noBuild)
-      expect(wrapper.vm.builds[1]).toBe(noBuild)
-      expect(wrapper.vm.builds[2]).toBe(noBuild)
-      expect(wrapper.vm.builds[3]).toBe(delayed)
-      expect(wrapper.vm.builds[4]).toBe(delayed)
-      expect(wrapper.vm.builds[5]).toBe(delayed)
-      expect(wrapper.vm.builds[6]).toBe(delayed)
-      expect(wrapper.vm.builds[7]).toBe(delayed)
-      expect(wrapper.vm.builds[8]).toBe(delayed)
-      expect(wrapper.vm.builds[9]).toBe(delayed)
-      expect(wrapper.vm.builds[10]).toBe(delayed)
-      expect(wrapper.vm.builds[11]).toBe(onTime)
-      expect(wrapper.vm.builds[12]).toBe(onTime)
-      expect(wrapper.vm.builds[13]).toBe(onTime)
-      expect(wrapper.vm.builds[14]).toBe(onTime)
+      expect(wrapper.vm.sortedBuilds[0]).toBe(noBuild)
+      expect(wrapper.vm.sortedBuilds[1]).toBe(noBuild)
+      expect(wrapper.vm.sortedBuilds[2]).toBe(noBuild)
+      expect(wrapper.vm.sortedBuilds[3]).toBe(delayed)
+      expect(wrapper.vm.sortedBuilds[4]).toBe(delayed)
+      expect(wrapper.vm.sortedBuilds[5]).toBe(delayed)
+      expect(wrapper.vm.sortedBuilds[6]).toBe(delayed)
+      expect(wrapper.vm.sortedBuilds[7]).toBe(delayed)
+      expect(wrapper.vm.sortedBuilds[8]).toBe(delayed)
+      expect(wrapper.vm.sortedBuilds[9]).toBe(delayed)
+      expect(wrapper.vm.sortedBuilds[10]).toBe(delayed)
+      expect(wrapper.vm.sortedBuilds[11]).toBe(onTime)
+      expect(wrapper.vm.sortedBuilds[12]).toBe(onTime)
+      expect(wrapper.vm.sortedBuilds[13]).toBe(onTime)
+      expect(wrapper.vm.sortedBuilds[14]).toBe(onTime)
 
     })
   })
