@@ -1,331 +1,40 @@
 [
   {
     "keyword": "Feature",
-    "name": "Builds",
+    "name": "History",
     "line": 1,
-    "id": "builds",
+    "id": "history",
     "tags": [],
-    "uri": "test/e2e/features/builds.feature",
+    "uri": "test/e2e/features/history.feature",
     "elements": [
       {
-        "id": "builds;viewing-the-latest-daily-builds",
-        "keyword": "Scenario",
-        "line": 7,
-        "name": "Viewing the latest daily builds",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "the landing page has been accessed",
-            "match": {
-              "location": "test/e2e/step-definitions/builds.steps.js:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 34073000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 5,
-            "name": "the builds navbar button has been clicked",
-            "match": {
-              "location": "test/e2e/step-definitions/builds.steps.js:9"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 197000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "the latest builds table should be visible",
-            "match": {
-              "location": "test/e2e/step-definitions/builds.steps.js:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 94000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 9,
-            "name": "the latest builds should be displayed in the table",
-            "match": {
-              "location": "test/e2e/step-definitions/builds.steps.js:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 49000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 10,
-            "name": "the build status must be displayed in the table for each record",
-            "match": {
-              "location": "test/e2e/step-definitions/builds.steps.js:33"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 59000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "builds;searching-builds",
-        "keyword": "Scenario",
-        "line": 12,
-        "name": "Searching builds",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "the landing page has been accessed",
-            "match": {
-              "location": "test/e2e/step-definitions/builds.steps.js:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 689000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 5,
-            "name": "the builds navbar button has been clicked",
-            "match": {
-              "location": "test/e2e/step-definitions/builds.steps.js:9"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 157000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 13,
-            "name": "I search for a build or builds",
-            "match": {
-              "location": "test/e2e/step-definitions/builds.steps.js:23"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 451000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 14,
-            "name": "the appropriate builds should be displayed",
-            "match": {
-              "location": "test/e2e/step-definitions/builds.steps.js:28"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 42000000
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "keyword": "Feature",
-    "name": "Google Search",
-    "line": 3,
-    "id": "google-search",
-    "tags": [],
-    "uri": "test/e2e/features/google.feature",
-    "elements": [
-      {
-        "id": "google-search;searching-google",
-        "keyword": "Scenario",
-        "line": 5,
-        "name": "Searching Google",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "I open Google's search page",
-            "match": {
-              "location": "test/e2e/step-definitions/google.js:6"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2160000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "the title is \"Google\"",
-            "match": {
-              "location": "test/e2e/step-definitions/google.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 40000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 9,
-            "name": "the Google search form exists",
-            "match": {
-              "location": "test/e2e/step-definitions/google.js:16"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 96000000
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "keyword": "Feature",
-    "name": "Insights page",
-    "line": 1,
-    "id": "insights-page",
-    "tags": [],
-    "uri": "test/e2e/features/insights.feature",
-    "elements": [
-      {
-        "id": "insights-page;viewing-insights",
-        "keyword": "Scenario",
-        "line": 7,
-        "name": "Viewing insights",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "I access the landing page",
-            "match": {
-              "location": "test/e2e/step-definitions/landingPage.steps.js:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 10505000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 5,
-            "name": "I have clicked on the insights tab",
-            "match": {
-              "location": "test/e2e/step-definitions/insights.steps.js:6"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 902000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "the insights page header should be displayed",
-            "match": {
-              "location": "test/e2e/step-definitions/insights.steps.js:10"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 97000000
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "keyword": "Feature",
-    "name": "Landing page",
-    "line": 1,
-    "id": "landing-page",
-    "tags": [],
-    "uri": "test/e2e/features/landingPage.feature",
-    "elements": [
-      {
-        "id": "landing-page;accessing-dashboard-landing-page",
+        "id": "history;viewing-the-builds-history-page",
         "keyword": "Scenario",
         "line": 3,
-        "name": "Accessing dashboard landing page",
+        "name": "Viewing the builds history page",
         "tags": [],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
+            "line": 4,
+            "name": "the Landing page has been accessed",
+            "match": {
+              "location": "test/e2e/step-definitions/history.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38268000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
             "line": 5,
-            "name": "I access the landing page",
+            "name": "the History menu item has been clicked",
             "match": {
-              "location": "test/e2e/step-definitions/landingPage.steps.js:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 490000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 6,
-            "name": "the title is FordPass Builds",
-            "match": {
-              "location": "test/e2e/step-definitions/landingPage.steps.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 61000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 7,
-            "name": "the FordPass header logo should be displayed",
-            "match": {
-              "location": "test/e2e/step-definitions/landingPage.steps.js:16"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 94000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 8,
-            "name": "the Builds tab should be displayed",
-            "match": {
-              "location": "test/e2e/step-definitions/landingPage.steps.js:20"
+              "location": "test/e2e/step-definitions/history.steps.js:10"
             },
             "result": {
               "status": "passed",
@@ -334,15 +43,15 @@
           },
           {
             "arguments": [],
-            "keyword": "And ",
-            "line": 9,
-            "name": "the latest builds table should be displayed",
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the History page title should be displayed",
             "match": {
-              "location": "test/e2e/step-definitions/landingPage.steps.js:24"
+              "location": "test/e2e/step-definitions/history.steps.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 94000000
+              "duration": 53000000
             }
           }
         ]

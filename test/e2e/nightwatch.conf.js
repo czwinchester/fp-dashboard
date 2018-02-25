@@ -1,6 +1,6 @@
 require('babel-register')
 require('nightwatch-cucumber')({
-  cucumberArgs: ['--require', 'test/e2e/step-definitions','--format', 'node_modules/cucumber-pretty', '--format', 'json:reports/cucumber.json', 'test/e2e/features']
+  cucumberArgs: ['--require', 'test/e2e/step-definitions','--format', 'node_modules/cucumber-pretty', '--format', 'json:test/e2e/reports/cucumber.json', 'test/e2e/features']
 })
 var config = require('../../config')
 

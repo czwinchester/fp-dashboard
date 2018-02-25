@@ -6,6 +6,7 @@ module.exports = {
     title: 'title',
     logo: '#header-logo',
     buildsTab: '#builds-tab',
-    insightsTab: '#insights-tab'
+    insightsTab: '#insights-tab',
+    historyTab: '#history-tab'
   }
 }
