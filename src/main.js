@@ -31,7 +31,7 @@ Object.defineProperty(Vue.prototype, '$_', { value: lodash })
 // Create VueI18n instance with options
 const i18n = new VueI18n({
   locale: 'en-GB', // set locale
-  messages: lang, // set locale messages
+  messages: lang // set locale messages
 })
 
 /* eslint-disable no-new */
