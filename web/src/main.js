@@ -30,7 +30,7 @@ const messages = {
 
 // Create VueI18n instance with options
 const i18n = new VueI18n({
-  locale: 'en-GB', // set locale
+  locale: 'en', // set locale
   messages: messages // set locale messages
 })
 
