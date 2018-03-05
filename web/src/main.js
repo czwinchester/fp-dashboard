@@ -11,7 +11,7 @@ import lodash from 'lodash'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 import VueI18n from 'vue-i18n'
-import lang from '../i18n/lang'
+// import lang from '../i18n/lang'
 
 Vue.use(VueMaterial)
 Vue.use(Buefy)
@@ -21,17 +21,17 @@ Vue.prototype.moment = moment
 Object.defineProperty(Vue.prototype, '$_', { value: lodash })
 
 // Ready translated locale messages
-// const messages = {
-//   en: {
-//     day: 'day | days',
-//     month: 'month | months'
-//   }
-// }
+const messages = {
+  en: {
+    day: 'day | days',
+    month: 'month | months'
+  }
+}
 
 // Create VueI18n instance with options
 const i18n = new VueI18n({
   locale: 'en-GB', // set locale
-  messages: lang // set locale messages
+  messages: messages // set locale messages
 })
 
 /* eslint-disable no-new */
